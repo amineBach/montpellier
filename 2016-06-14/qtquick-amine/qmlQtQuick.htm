@@ -114,8 +114,8 @@ Rectangle {
 .right-column[
 ```qml
 //qml.qml
-import QtQuick 2.0
 Rectangle {
+  function go() {/*...*/}
   MyButton {
       textButton.text: "OK"    
       onClic: go()
@@ -150,10 +150,12 @@ Syntaxe :
 
 - Intégration complète dans Qt :
  - Utilisation complète des signaux et slots 
- - l'objet global Qt peut-être utilisé (sans déclaration): 
+ - l'objet global Qt peut-être utilisé pour accéder aux propriétés spécifiques : 
+   ```qsTr```, ```application```,.....
+   avec la syntaxe : 
    ```color: Qt.rgba(1, 0, 0, 1) ```
  - Utilisation des types spécifiques : ```font```,```point```, ```rect```, ```size```, ...
- - Propriétés ```qsTr```, ```formatDateTime```, et ```application```
+ 
 
 - Création d'objets et de Composants  :
  - Avec une chaine de caractère : ```createQmlObject``` 
